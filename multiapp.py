@@ -19,14 +19,19 @@ class MultiApp:
 
     def run(self):
         # app = st.sidebar.radio(
+        menu = ['Style Transfer', 'Advanced Features']
         app = st.sidebar.selectbox(
             'Select from the options',
-            self.apps,
+            menu,
             format_func=lambda app: app['title'])
         
-        app1 = st.sidebar.selectbox(
-            'Advanced Features for Editng',
-            self.apps,
-            format_func=lambda app: app['title'])
+        cont = st.beta_container()
+        col1 , col2 = st.beta_columns(2)
+        with col1:
+            style = st.sidebar.selectbox("Select the option of style transfers", self.apps, format_func=lambda app: app['title'])
+        with col2: 
+            advanced = st.sidebar.selectbox("Select the advanced features", self.apps, format_func=lambda app: app['title'])
+        
+   
 
         app['function']()
