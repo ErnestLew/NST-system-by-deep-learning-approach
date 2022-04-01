@@ -57,6 +57,7 @@ import torchvision.models as models
 
 # Add all your application here
 app.add_app("Home", home.app)
+app.add_app("Clothes Transfer", abtus.app)
 app.add_app("Add filters to image", filters.app)
 app.add_app("Sketch", sketch.app)
 app.add_app("Image inpainting", inpaint.app)
