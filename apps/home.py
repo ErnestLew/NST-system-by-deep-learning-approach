@@ -26,13 +26,13 @@ def app():
     content_file = st.file_uploader("Upload Content image...", type=['png', 'jpg', 'jpeg'])
 
     if content_file is not None:
-        st.image(content_file, caption='Uploaded Content Image.', use_column_width=True)
+        st.image(content_file, caption='Uploaded Content Image.', width=224)
 
 
     style_file = st.file_uploader("Upload Style image...", type=['png', 'jpg', 'jpeg'])
 
     if style_file is not None:
-        st.image(style_file, caption='Uploaded Style Image.', use_column_width=True)
+        st.image(style_file, caption='Uploaded Style Image.', width=224)
 
 
     epochz=150
@@ -50,7 +50,7 @@ def app():
     st.write('Running on..',device,'...')
 
     # desired size of the output image
-    imsize = 512 if torch.cuda.is_available() else 250  # use small size if no gpu
+    imsize = 512 if torch.cuda.is_available() else 128  # use small size if no gpu
 
     loader = transforms.Compose([
         transforms.Resize(imsize),  # scale imported image
