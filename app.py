@@ -68,6 +68,12 @@ app.add_app("Face detection", Face_detect.app)
 app.add_app("Feature Detection", Feature_detect.app)
 app.add_app("Clothes Transfer", abtus.app)
 
+app1.add_app("Add filters to image", filters.app)
+app1.add_app("Sketch", sketch.app)
+app1.add_app("Sketch", sketch.app)
+
+
 # The main app
 app.run()
+app1.run()
 
