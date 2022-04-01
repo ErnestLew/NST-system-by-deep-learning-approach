@@ -75,13 +75,13 @@ st.title('Neural Style Transfer <3')
 st.write('This AI lets you to impose the look of a pic (style image) on to another pic(content image)')
 st.markdown('set style coeff to 0.2 & content coeff to 0.8 with more no of iterations for achiving decent results')
 
-content_file = st.file_uploader("Upload Content image...", type="jpg")
+content_file = st.file_uploader("Upload Content image...", type=["jpg","png","jpeg"])
 
 if content_file is not None:
     st.image(content_file, caption='Uploaded Content Image.', use_column_width=True)
 
     
-style_file = st.file_uploader("Upload Style image...", type="jpg")
+style_file = st.file_uploader("Upload Style image...", type=["jpg","png","jpeg"])
 
 if style_file is not None:
     st.image(style_file, caption='Uploaded Style Image.', use_column_width=True)
@@ -93,8 +93,8 @@ sxx=1
 cxx=1
 
 epochz = st.slider('Number of iterations',min_value=100,max_value=1000,step=50)
-sxx = st.slider('Style coeff',min_value=0.1,max_value=2.0,step=0.1)
-cxx = st.slider('Content coeff',min_value=0.1,max_value=2.0,step=0.1)
+sxx = st.slider('Style coefficient',min_value=0.1,max_value=2.0,step=0.1)
+cxx = st.slider('Content coefficient',min_value=0.1,max_value=2.0,step=0.1)
 
 #--------------------------------------BackEnd
 
@@ -329,6 +329,6 @@ if st.button("Submit"):
   if style_file and content_file:
     input_img = run_style_transfer(cnn, cnn_normalization_mean, cnn_normalization_std,
                                    content_img, style_img, input_img)
-    imshow(input_img, title='Resultant Image')
+    imshow(input_img, title='Resultant Image', 'InitialMagnification', 800)
   else:
     st.write("First you gotta upload both the images..!!")
