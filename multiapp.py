@@ -17,14 +17,6 @@ class MultiApp:
             "function": func
         })
         
-    def add_app1(self, title, func):
-        """Adds a new application.
-
-        """
-        self.apps.append({
-            "title": title,
-            "function": func
-        })
 
     def run(self):
         # app = st.sidebar.radio(
@@ -33,10 +25,7 @@ class MultiApp:
             self.apps,
             format_func=lambda app: app['title'])
         
-        app1 = st.sidebar.selectbox(
-            'Select from the options',
-            self.apps,
-            format_func=lambda app: app['title'])
+
 
         app['function']()
-        app1['function']()
+
