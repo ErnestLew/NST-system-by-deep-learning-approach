@@ -16,23 +16,20 @@ import torchvision.models as models
 
 
 def app():
-    st.title("Neural Style Transfer for Wedding Photo")
-    image = Image.open('imgs/lake.jpeg')
-    st.image(image, caption='Welcome to my webapp!', use_column_width=True)
     st.title('Neural Style Transfer <3')
     st.write('This AI lets you to impose the look of a pic (style image) on to another pic(content image)')
     st.markdown('set style coeff to 0.2 & content coeff to 0.8 with more no of iterations for achiving decent results')
 
-    content_file = st.file_uploader("Upload Content image...", type=['png', 'jpg', 'jpeg'])
+    content_file = st.file_uploader("Upload Content image...", type=["jpg","png","jpeg"])
 
     if content_file is not None:
-        st.image(content_file, caption='Uploaded Content Image.', width=224)
+        st.image(content_file, caption='Uploaded Content Image.', width = 224)
 
 
-    style_file = st.file_uploader("Upload Style image...", type=['png', 'jpg', 'jpeg'])
+    style_file = st.file_uploader("Upload Style image...", type=["jpg","png","jpeg"])
 
     if style_file is not None:
-        st.image(style_file, caption='Uploaded Style Image.', width=224)
+        st.image(style_file, caption='Uploaded Style Image.', width = 224)
 
 
     epochz=150
@@ -41,8 +38,8 @@ def app():
     cxx=1
 
     epochz = st.slider('Number of iterations',min_value=100,max_value=1000,step=50)
-    sxx = st.slider('Style coefficient',min_value=0.1,max_value=2.0,step=0.1)
-    cxx = st.slider('Content coefficient',min_value=0.1,max_value=2.0,step=0.1)
+    sxx = st.slider('Style coeff',min_value=0.1,max_value=2.0,step=0.1)
+    cxx = st.slider('Content coeff',min_value=0.1,max_value=2.0,step=0.1)
 
     #--------------------------------------BackEnd
 
@@ -272,7 +269,7 @@ def app():
         return input_img
 
     #-------------------------------Run NST++++++++++++show result
-
+    
     if st.button("Submit"):
       if style_file and content_file:
         input_img = run_style_transfer(cnn, cnn_normalization_mean, cnn_normalization_std,
