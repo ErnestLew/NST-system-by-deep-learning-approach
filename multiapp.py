@@ -23,5 +23,10 @@ class MultiApp:
             'Select from the options',
             self.apps,
             format_func=lambda app: app['title'])
+        
+        app1 = st.sidebar.selectbox(
+            'Advanced Features for Editng',
+            self.apps,
+            format_func=lambda app: app['title'])
 
         app['function']()
