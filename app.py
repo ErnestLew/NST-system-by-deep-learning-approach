@@ -1,3 +1,4 @@
+from __future__ import print_function
 import streamlit as st
 st.set_page_config(
     page_title="Neural Style Transfer",
@@ -27,7 +28,6 @@ import time
 import copy
 import os
 import math
-from __future__ import print_function
 
 from PIL import Image
 
