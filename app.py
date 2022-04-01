@@ -70,6 +70,7 @@ app.add_app("Clothes Transfer", abtus.app)
 
 app1.add_app1("Add filters to image", filters.app)
 # The main app
-(app, app1).run()
+app.run()
+app1.run()
 
 
