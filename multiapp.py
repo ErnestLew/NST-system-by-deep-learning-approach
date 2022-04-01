@@ -28,9 +28,9 @@ class MultiApp:
         cont = st.beta_container()
         col1 , col2 = st.beta_columns(2)
         with col1:
-            style = st.sidebar.selectbox("Select the option of style transfers", self.apps, format_func=lambda app: app['title'])
+            style = st.sidebar.selectbox("Select the option of style transfers", self.apps)
         with col2: 
-            advanced = st.sidebar.selectbox("Select the advanced features", self.apps, format_func=lambda app: app['title'])
+            advanced = st.sidebar.selectbox("Select the advanced features", self.apps)
         
    
 
