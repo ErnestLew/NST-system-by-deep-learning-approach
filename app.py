@@ -329,6 +329,6 @@ if st.button("Submit"):
   if style_file and content_file:
     input_img = run_style_transfer(cnn, cnn_normalization_mean, cnn_normalization_std,
                                    content_img, style_img, input_img)
-    imshow(input_img, title='Resultant Image', [512, 512])
+    imshow(input_img, title='Resultant Image')
   else:
     st.write("First you gotta upload both the images..!!")
