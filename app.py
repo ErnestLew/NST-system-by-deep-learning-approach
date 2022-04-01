@@ -74,6 +74,6 @@ app1.add_app("Sketch", sketch.app)
 
 
 # The main app
-(app, app1).run()
+app.run()
 
 
