@@ -57,7 +57,7 @@ import torchvision.models as models
 
 # Add all your application here
 app.add_app("Home", home.app)
-
+app.add_app("Add filters to image", filters.app)
 app.add_app("Sketch", sketch.app)
 app.add_app("Image inpainting", inpaint.app)
 app.add_app("Doc Scanner", stadap.app)
@@ -67,9 +67,6 @@ app.add_app("Edge and Contour detection ", Edge_Cont.app)
 app.add_app("Face detection", Face_detect.app)
 app.add_app("Feature Detection", Feature_detect.app)
 app.add_app("Clothes Transfer", abtus.app)
-
-app.add_app1("Add filters to image", filters.app)
-
 
 # The main app
 app.run()
