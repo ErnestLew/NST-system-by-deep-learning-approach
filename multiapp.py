@@ -39,3 +39,4 @@ class MultiApp:
             format_func=lambda app: app['title'])
 
         app['function']()
+        app1['function']()
