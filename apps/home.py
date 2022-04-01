@@ -23,13 +23,13 @@ def app():
     st.write('This AI lets you to impose the look of a pic (style image) on to another pic(content image)')
     st.markdown('set style coeff to 0.2 & content coeff to 0.8 with more no of iterations for achiving decent results')
 
-    content_file = st.file_uploader("Upload Content image...", type=["jpg","png","jpeg"])
+    content_file = st.file_uploader("Upload Content image...", type=['png', 'jpg', 'jpeg'])
 
     if content_file is not None:
         st.image(content_file, caption='Uploaded Content Image.', use_column_width=True)
 
 
-    style_file = st.file_uploader("Upload Style image...", type=["jpg","png","jpeg"])
+    style_file = st.file_uploader("Upload Style image...", type=['png', 'jpg', 'jpeg'])
 
     if style_file is not None:
         st.image(style_file, caption='Uploaded Style Image.', use_column_width=True)
@@ -277,7 +277,7 @@ def app():
       if style_file and content_file:
         input_img = run_style_transfer(cnn, cnn_normalization_mean, cnn_normalization_std,
                                        content_img, style_img, input_img)
-        t = transforms.Resize(250)
+        t = transforms.Resize(200)
         resized_img = t(input_img)
         imshow(resized_img, title='Output Image')
       else:
