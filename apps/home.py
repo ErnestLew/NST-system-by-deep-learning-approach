@@ -26,13 +26,13 @@ def app():
     content_file = st.file_uploader("Upload Content image...", type=["jpg","png","jpeg"])
 
     if content_file is not None:
-        st.image(content_file, caption='Uploaded Content Image.', width = 224)
+        st.image(content_file, caption='Uploaded Content Image.', use_column_width=True)
 
 
     style_file = st.file_uploader("Upload Style image...", type=["jpg","png","jpeg"])
 
     if style_file is not None:
-        st.image(style_file, caption='Uploaded Style Image.', width = 224)
+        st.image(style_file, caption='Uploaded Style Image.', use_column_width=True)
 
 
     epochz=150
