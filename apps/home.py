@@ -277,7 +277,9 @@ def app():
       if style_file and content_file:
         input_img = run_style_transfer(cnn, cnn_normalization_mean, cnn_normalization_std,
                                        content_img, style_img, input_img)
-        imshow(input_img, title='Resultant Image')
+        t = transform.Resize(512)
+        resized_img = t(input_img)
+        imshow(resized_img, title='Output Image')
       else:
         st.write("First you gotta upload both the images..!!")
 
