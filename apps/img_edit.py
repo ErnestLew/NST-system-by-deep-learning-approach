@@ -61,7 +61,7 @@ def app():
       flip_direction = setting_flip_image
 
       # implementing sharpness
-      sharp = ImageEnhance.Sharpness(img)
+      sharp = ImageEnhance.Sharpness(img.convert('RGB'))
       edited_img = sharp.enhance(sharp_value)
 
       # implementing colors
