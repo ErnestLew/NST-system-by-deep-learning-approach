@@ -11,7 +11,7 @@ import pandas as pd
 from PIL import Image, ImageOps
 import cv2
 from multiapp import MultiApp
-from apps import home,sketch,inpaint,stadap,textonimg,Edge_Cont,Face_detect,Crop,filters,Feature_detect,abtus
+from apps import home,sketch,inpaint,stadap,textonimg,Edge_Cont,Face_detect,Crop,filters,Feature_detect,abtus,img_edit
 app = MultiApp()
 
 import torch
@@ -58,6 +58,7 @@ import torchvision.models as models
 # Add all your application here
 app.add_app("Home", home.app)
 app.add_app("Clothes Transfer", abtus.app)
+app.add_app("Image Editing", img_edit.app)
 app.add_app("Add filters to image", filters.app)
 app.add_app("Sketch", sketch.app)
 app.add_app("Image inpainting", inpaint.app)
