@@ -6,7 +6,7 @@ from PIL import Image
 import cv2
 import numpy as np
 
-DEMO_IMAGE = 'imgs/Tiger.jpg'
+DEMO_IMAGE = 'imgs/content.jpg'
 
 def app():
     st.title("Neural Style Transfer for Wedding Photo")
