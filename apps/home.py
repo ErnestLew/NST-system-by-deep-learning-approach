@@ -40,9 +40,9 @@ def app():
     sxx=1
     cxx=1
 
-    epochz = st.slider('Number of iterations',min_value=100,max_value=1000,step=50)
-    sxx = st.slider('Style coeff',min_value=0.1,max_value=2.0,step=0.1)
-    cxx = st.slider('Content coeff',min_value=0.1,max_value=2.0,step=0.1)
+    epochz = st.slider('Clarity of Image',min_value=100,max_value=1000,step=50)
+    sxx = st.slider('Strength of Style Image',min_value=0.1,max_value=2.0,step=0.1)
+    cxx = st.slider('Strength of Content Image',min_value=0.1,max_value=2.0,step=0.1)
 
     #--------------------------------------BackEnd
 
