@@ -6,8 +6,8 @@ import numpy as np
 import copy
 def app():
     st.title("Neural Style Transfer for Wedding Photo")
-    DEMO_IMAGE = 'imgs/Tiger.jpg'
-    SP_DEMO_IMAGE = 'imgs/ball.jpg'
+    DEMO_IMAGE = 'imgs/content.jpg'
+    SP_DEMO_IMAGE = 'imgs/116.jpg'
     SP_IMAGE = 'imgs/Splash.jpg'   
 
     def load_image():
