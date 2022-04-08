@@ -6,7 +6,7 @@ import copy
 
 
 def app():
-    DEMO_IMAGE = 'imgs/Person.jpg'
+    DEMO_IMAGE = 'imgs/116.jpg'
 
     def face_detection():
         st.title("Neural Style Transfer for Wedding Photo")
