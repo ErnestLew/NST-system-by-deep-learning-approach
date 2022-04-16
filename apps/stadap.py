@@ -13,7 +13,7 @@ import cv2
 # to convert the image in grayscale
 def app():
     st.title("Neural Style Transfer for Wedding Photo")
-    DEMO_IMAGE = 'imgs/content.jpeg'
+    DEMO_IMAGE = 'imgs/content.jpg'
     @st.cache
     def adap(img):
         img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
