@@ -474,17 +474,3 @@ def app():
         st.title('Comic Filter Using K-Means')
         image = load_image()
         res = comic(image)
-
-        
-
-    
-    # if selected_box == 'Sketch':
-    #     st.title('Sketch Filter')
-    #     image = load_image()
-
-    #     useWH = st.checkbox('Drawing image')
-    #     if useWH:
-    #         st.subheader('Input a new Width and Height')
-    #         k_size = int(st.number_input('Input a new kernel size'))
-    #         resized_image = img2sketch(image , k_size)
-    #         st.image(resized_image, caption=f"Drawing image", use_column_width=False)
