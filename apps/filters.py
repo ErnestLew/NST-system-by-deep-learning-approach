@@ -276,7 +276,7 @@ def app():
                 img[:, :, i] = 0 # setting values of all other slices to 0
         return img
 
-    selected_box = st.sidebar.selectbox('Choose one of the filters',('None', 'Bright', 'Detail Enchance', 'Invert', 'Summer', 'Winter', 'Daylight', 'High Contrast', 'Sepia', 'Splash', 'Emboss','60s TV', 'Dual Tone', 'Cartoon', 'Pencil Drawing', 'Comic'))
+    selected_box = st.sidebar.selectbox('Choose one of the filters',('None', 'Bright', 'Detail Enchance', 'Invert', 'Summer', 'Winter', 'Daylight', 'High Contrast', 'Sepia', 'Emboss','60s TV', 'Dual Tone', 'Cartoon', 'Pencil Drawing', 'Comic'))
 
     def img2day(photo):
         img = photo
@@ -324,7 +324,7 @@ def app():
 
         st.subheader("Available Filters", anchor=None)
 
-        st.markdown('<ul> <li> Bright <li>  Detail Enhance  <li> Invert<li> Summer   <li> Winter  <li> Daylight <li> High Contrast<li> Sepia  <li> Splash<li> Emboss   <li> 60s TV  <li> Dual tone <li> Cartoon <li>Pencil Drawing <li>Comic </ul>', unsafe_allow_html=True)
+        st.markdown('<ul> <li> Bright <li>  Detail Enhance  <li> Invert<li> Summer   <li> Winter  <li> Daylight <li> High Contrast<li> Sepia  <li>  Emboss   <li> 60s TV  <li> Dual tone <li> Cartoon <li>Pencil Drawing <li>Comic </ul>', unsafe_allow_html=True)
       
 
 
