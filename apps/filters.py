@@ -400,25 +400,6 @@ def app():
             resized_image = img2sepia(image)
             st.image(resized_image, caption=f"Image with Sepia Filter", use_column_width=True)
 
-    if selected_box == 'Splash':
-        st.title('Splash Filter')
-
-        img_file_buffer = st.file_uploader("Upload an image", type=[ "jpg", "jpeg",'png'])
-        if img_file_buffer is not None:
-                image = np.array(Image.open(img_file_buffer))
-        else:
-            demo_image = SP_DEMO_IMAGE
-            image = np.array(Image.open(demo_image))
-
-        st.image(image, caption=f"Original Image",use_column_width= True)
-
-        useWH = st.button('CONVERT')
-        if useWH:    
-            resized_image = img2splash(image)
-            splash_image = SP_IMAGE
-            resized_image = np.array(Image.open(splash_image))
-            st.image(resized_image, caption=f"Image with Splash Filter", use_column_width=True)
-
     if selected_box == 'Emboss':
         st.title('Emboss Filter')
         image = load_image()
