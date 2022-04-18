@@ -19,7 +19,7 @@ def app():
     st.title("Neural Style Transfer for Wedding Photo")
     image = Image.open('imgs/lake.jpeg')
     st.image(image, caption='Welcome to my webapp!', use_column_width=True)
-    st.title('Neural Style Transfer <3')
+    st.title('Neural Style Transfer')
     st.write('This AI lets you to impose the look of a pic (style image) on to another pic(content image)')
     st.markdown('set style coeff to 0.2 & content coeff to 0.8 with more no of iterations for achiving decent results')
 
